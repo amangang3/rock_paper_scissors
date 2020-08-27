@@ -33,16 +33,31 @@
                 return playerChoice;      
             }
             
-            function playRound(playerSelection, computerSelection) {
+            function decideWinner(playerSelection, computerSelection) {
+                // comopare playerSelection to computerSelection
+                switch(playerSelection){
+                    case computerSelection:
+                        console.log("Samsies! Draw");
+                        break;
+
+                    case "rock":
+                        console.log("you picked rock");
+                        break;
+
+                    case "paper":
+                        console.log("you picked paper");
+                        break; 
+
+                    case "scissor":
+                        console.log("you picked scissor")
+                        break; 
+                }
                 
-
-
-
-
-
-
             }
 
+            playerChoice = humanPlay();
+            computerChoice = computerPlay();
+            decideWinner(playerChoice, computerChoice);
             
         </script>
     </body>
