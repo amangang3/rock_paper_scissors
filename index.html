@@ -14,13 +14,13 @@
                 // Assign a choice to the computer depending on the random value 
                 switch(randomNumber){
                     case 0:
-                        computerChoice = "Rock";
+                        computerChoice = "rock";
                         break;
                     case 1:
-                        computerChoice = "Paper";
+                        computerChoice = "paper";
                         break; 
                     case 2:
-                        computerChoice = "Scissor";
+                        computerChoice = "scissor";
                         break; 
                 }
                 return computerChoice;           
@@ -28,9 +28,22 @@
             
             function humanPlay(){
                 let playerChoice = prompt("Pick Rock, Paper or Scissor");
-                console.log(playerChoice);
+                // remove case dependency 
+                playerChoice = playerChoice.toLowerCase();          
+                return playerChoice;      
             }
-            humanPlay()
+            
+            function playRound(playerSelection, computerSelection) {
+                
+
+
+
+
+
+
+            }
+
+            
         </script>
     </body>
 </html>
