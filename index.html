@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <script>
+            function computerPlay(){
+                // This function will randomly pick rock/paper/scissors
+                let randomNumber = Math.floor(Math.random() * 3) //randomly pick 0, 1 or 2
+                let computerChoice = "";
+
+                // Assign a choice to the computer depending on the random value 
+                switch(randomNumber){
+                    case 0:
+                        computerChoice = "Rock";
+                        break;
+                    case 1:
+                        computerChoice = "Paper";
+                        break; 
+                    case 2:
+                        computerChoice = "Scissor";
+                        break; 
+                }
+                return computerChoice;           
+            }
+            
+            function humanPlay(){
+                let playerChoice = prompt("Pick Rock, Paper or Scissor");
+                console.log(playerChoice);
+            }
+            humanPlay()
+        </script>
+    </body>
+</html>
