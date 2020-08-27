@@ -41,16 +41,37 @@
                         break;
 
                     case "rock":
-                        console.log("you picked rock");
-                        break;
+                        if (computerSelection == "paper"){
+                            console.log("You lost, computer picked: " + computerSelection);
+                            break;
+                        }
+
+                        else {
+                            console.log("You won, computer picked: " + computerSelection);
+                            break; 
+                        }
 
                     case "paper":
-                        console.log("you picked paper");
-                        break; 
+                        if (computerSelection == "scissor"){
+                            console.log("You lost, computer picked: " + computerSelection);
+                            break; 
+                        }
+
+                        else {
+                            console.log("You won, computer picked: " + computerSelection);
+                            break; 
+                        }
 
                     case "scissor":
-                        console.log("you picked scissor")
-                        break; 
+                        if (computerSelection == "rock"){
+                            console.log("You lost, computer picked: " + computerSelection);
+                            break;
+                        }
+
+                        else {
+                            console.log("You won, computer picked: " + computerSelection);
+                            break;
+                        }
                 }
                 
             }
