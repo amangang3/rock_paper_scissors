@@ -6,6 +6,10 @@
     </head>
     <body>
         <script>
+            let numberOfGames = 5;
+            let playerWins = 0;
+            let computerWins = 0;
+
             function computerPlay(){
                 // This function will randomly pick rock/paper/scissors
                 let randomNumber = Math.floor(Math.random() * 3) //randomly pick 0, 1 or 2
@@ -43,42 +47,57 @@
                     case "rock":
                         if (computerSelection == "paper"){
                             console.log("You lost, computer picked: " + computerSelection);
+                            computerWins++;
                             break;
                         }
 
                         else {
                             console.log("You won, computer picked: " + computerSelection);
+                            playerWins++;            
                             break; 
                         }
 
                     case "paper":
                         if (computerSelection == "scissor"){
                             console.log("You lost, computer picked: " + computerSelection);
+                            computerWins++;
                             break; 
                         }
 
                         else {
                             console.log("You won, computer picked: " + computerSelection);
+                            playerWins++;        
                             break; 
                         }
 
                     case "scissor":
                         if (computerSelection == "rock"){
                             console.log("You lost, computer picked: " + computerSelection);
+                            computerWins++;
                             break;
                         }
 
                         else {
                             console.log("You won, computer picked: " + computerSelection);
+                            playerWins++;        
                             break;
                         }
                 }
+                return computerWins, playerWins;
                 
             }
 
-            playerChoice = humanPlay();
-            computerChoice = computerPlay();
-            decideWinner(playerChoice, computerChoice);
+            function game(){
+                for (game=0; game < numberOfGames; game++){
+                    playerChoice = humanPlay();
+                    computerChoice = computerPlay();
+                    computerWins, playerWins = decideWinner(playerChoice, computerChoice);
+                    console.log("You: " + playerWins + " Computer: " + computerWins);
+                }
+                console.log("Game has ended. Begone.")
+            }
+            
+            game();
             
         </script>
     </body>
