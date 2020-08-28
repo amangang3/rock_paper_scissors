@@ -80,15 +80,22 @@ function decideWinner(playerSelection, computerSelection) {
     
 }
 
+function displayResults(playerWins, computerWins) {
+    let resultTag = document.getElementById("gameDisplay");
+    resultTag.innerHTML = ("You: " + playerWins + " Computer: " + computerWins);
+    document.getElementById('gameDisplay').appendChild(resultTag);
+}
+
 function gameStart(playerChoice){
     playerChoice = humanPlay(playerChoice);
     computerChoice = computerPlay();
     computerWins, playerWins = decideWinner(playerChoice, computerChoice);
-    alert(("You: " + playerWins + " Computer: " + computerWins));
+    displayResults(playerWins, computerWins); 
 }
 
 
-// Check which buttons are clicked 
+
+// Check which buttons are clicked and start the game 
 document.getElementById("rockImg").addEventListener("click", function() {
     gameStart("rock"); 
 });
