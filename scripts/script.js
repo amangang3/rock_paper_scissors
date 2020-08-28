@@ -80,22 +80,24 @@ function decideWinner(playerSelection, computerSelection) {
     
 }
 
-function game(playerChoice){
+function gameStart(playerChoice){
     playerChoice = humanPlay(playerChoice);
     computerChoice = computerPlay();
     computerWins, playerWins = decideWinner(playerChoice, computerChoice);
     alert(("You: " + playerWins + " Computer: " + computerWins));
 }
 
-document.getElementById("rock").addEventListener("click", function() {
-    game("rock"); 
+
+// Check which buttons are clicked 
+document.getElementById("rockImg").addEventListener("click", function() {
+    gameStart("rock"); 
 });
 
-document.getElementById("paper").addEventListener("click", function() {
-    game("paper"); 
+document.getElementById("paperImg").addEventListener("click", function() {
+    gameStart("paper"); 
 });
 
-document.getElementById("scissor").addEventListener("click", function() {
-    game("scissor"); 
+document.getElementById("scissorImg").addEventListener("click", function() {
+    gameStart("scissor"); 
 });
 
